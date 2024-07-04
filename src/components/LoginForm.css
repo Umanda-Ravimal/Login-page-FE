@@ -1,0 +1,45 @@
+.Background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Background::before {
+  content: "";
+  background-image: url("../../public/background-img.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.Paper {
+  max-width: 400px;
+  margin: 0 20px;
+  padding: 2rem;
+  border-radius: 8px;
+  background: transparent !important;
+  backdrop-filter: blur(35px);
+}
+
+h2 {
+  margin: 20px;
+  text-align: center;
+}
+.TextField {
+  margin-top: 20px !important;
+}
+
+.Button {
+  border-radius: 20px !important;
+  margin-top: 30px !important;
+}
