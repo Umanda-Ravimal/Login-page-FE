@@ -10,7 +10,7 @@
 
 .Background::before {
   content: "";
-  background-image: url("../../public/background-img.jpg"); 
+  background-image: url("../../../public/background-img.jpg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

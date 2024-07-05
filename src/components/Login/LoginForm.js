@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import useAuthStore from "../store/authStore";
+import useAuthFacade from "../../facades/authFacade";
 import "./LoginForm.css";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
@@ -17,7 +17,7 @@ const LoginForm = () => {
   const [passwordError, setPasswordError] = useState("");
   const navigate = useNavigate();
 
-  const setIsUserValid = useAuthStore((state) => state.setIsUserValid);
+  const { setIsUserValid } = useAuthFacade();
 
   const handleSubmit = async (event) => {
     event.preventDefault();

@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import useAuthStore from './store/authStore';
+import useAuthFacade from './facades/authFacade';
 import { Navigate} from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import HomePage from './pages/Home/HomePage';
 
 function App() {
 
-  const isUserValid = useAuthStore((state) => state.isUserValid);
+  const { isUserValid } = useAuthFacade();
 
   return <div>{isUserValid ? <HomePage /> : <Navigate to={"login"} />}</div>;
 }
